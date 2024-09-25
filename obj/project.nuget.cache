@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m/v3+cqVB+4+11z8p7ar8qRiTAlSlKuArmsIADLEA/ZWM08fjunk8JdhR7CH4U+x5bFEPIU5W2x5BAYbmua4Vw==",
+  "dgSpecHash": "gWZ2/sfQW9jstCq5gryGsZc9pNauIL0o2GKnjdRzTUTvURkxI6Vry5QoIAOe5PRGanyR2ifNBF43c3EFtWKNeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\caguamanta_y_mas.csproj",
+  "projectFilePath": "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\caguamanta_y_mas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elarv\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\elarv\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

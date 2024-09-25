@@ -1,0 +1,25 @@
+# Directorios de salida y archivos temporales
+bin/
+obj/
+*.suo
+*.user
+*.tmp
+*.log
+*.db*
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.json.local
+
+# Archivos de base de datos
+*.mdf
+*.ldf
+
+# Carpetas de herramientas y paquetes
+node_modules/
+packages/
+
+# Archivos de caché y temporales de herramientas
+.vs/
+*.user
+*.suo

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\caguamanta_y_mas.csproj": {}
+    "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\caguamanta_y_mas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\caguamanta_y_mas.csproj": {
+    "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\caguamanta_y_mas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\caguamanta_y_mas.csproj",
+        "projectUniqueName": "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\caguamanta_y_mas.csproj",
         "projectName": "caguamanta_y_mas",
-        "projectPath": "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\caguamanta_y_mas.csproj",
+        "projectPath": "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\caguamanta_y_mas.csproj",
         "packagesPath": "C:\\Users\\elarv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elarv\\source\\repos\\caguamanta_y_mas\\obj\\",
+        "outputPath": "C:\\Users\\elarv\\OneDrive\\Documentos\\programming\\caguamanta-y-mas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elarv\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,6 +54,8 @@
               "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
             }
