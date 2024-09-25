@@ -6,29 +6,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace caguamanta_y_mas.Models;
 
-public partial class Ventum
+public partial class Venta
 {
     [Key]
-    public int idVenta { get; set; }
+    public int IdVenta { get; set; }
 
     [DataType(DataType.Date)]
     public DateOnly FechaVenta { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public int IDEmpleado { get; set; }
+    public int IdEmpleado { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public int IDCliente { get; set; }
+    public int IdCliente { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
     [Range(0, double.MaxValue, ErrorMessage = "El importe debe ser mayor a 0")]
-    public double? Importe { get; set; }
+    public double Importe { get; set; }
 
-    [ForeignKey("IDCliente")]
+	//Llave foranea
+
+	[ForeignKey("IDCliente")]
     [InverseProperty("Venta")]
-    public virtual Cliente IDClienteNavigation { get; set; } = null!;
+    public virtual Cliente ClienteNavId { get; set; }
 
     [ForeignKey("IDEmpleado")]
     [InverseProperty("Venta")]
-    public virtual Usuario IDEmpleadoNavigation { get; set; } = null!;
+    public virtual Usuario EmpleadoNavId{ get; set; }
 }

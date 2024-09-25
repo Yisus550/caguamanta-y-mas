@@ -6,31 +6,33 @@ using Microsoft.EntityFrameworkCore;
 
 namespace caguamanta_y_mas.Models;
 
-[Table("Compra")]
+// [Table("Compra")]
 public partial class Compra
 {
     [Key]
-    public int idCompra { get; set; }
+    public int IdCompra { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
     [DataType(DataType.Date)]
     public DateOnly FechaCompra { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public int IDEmpleado { get; set; }
+    public int IdEmpleado { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public int IDProveedor { get; set; }
+    public int IdProveedor { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio")]
     [Range(0, double.MaxValue, ErrorMessage ="El importe debe ser mayor a 0")]
-    public double? Importe { get; set; }
+    public double Importe { get; set; }
 
-    [ForeignKey("IDEmpleado")]
+	//Llave foranea
+
+	[ForeignKey("IDEmpleado")]
     [InverseProperty("Compras")]
-    public virtual Usuario IDEmpleadoNavigation { get; set; } = null!;
+    public virtual Usuario EmpleadoNavId { get; set; }
 
     [ForeignKey("IDProveedor")]
     [InverseProperty("Compras")]
-    public virtual Proveedore IDProveedorNavigation { get; set; } = null!;
+    public virtual Proveedor ProveedorNavId { get; set; }
 }

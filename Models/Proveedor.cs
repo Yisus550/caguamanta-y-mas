@@ -6,29 +6,30 @@ using Microsoft.EntityFrameworkCore;
 
 namespace caguamanta_y_mas.Models;
 
-public partial class Platillo
+public partial class Proveedor
 {
     [Key]
-    public int IdPlatillo { get; set; }
+    public int IdProveedor { get; set; }
 
     [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public string NombrePlatillo { get; set; }
+    public string NombreProveedor { get; set; }
+
+    [Phone]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+
+    public string Telefono { get; set; }
+
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [EmailAddress(ErrorMessage ="No cumple con la estructura de un Email")]
+    public string Correo { get; set; }
 
     [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
     [Required(ErrorMessage = "Este campo es obligatorio")]
-    public string DescripcionPlatillo { get; set; }
-
-    [Required(ErrorMessage = "Este campo es obligatorio")]
-    public int Categoria { get; set; }
-
-    [Required(ErrorMessage = "Este campo es obligatorio")]
-    [Range(0, double.MaxValue, ErrorMessage = "El precio debe ser mayor a 0")]
-    public double PrecioUnidad { get; set; }
+    public string Empresa { get; set; }
 
 	//Llave foranea
 
-	[ForeignKey("Categoria")]
-    [InverseProperty("Platillos")]
-    public virtual Categoria CategoriaNavId { get; set; }
+	[InverseProperty("ProveedorNavId")]
+    public virtual ICollection<Compra> Compras { get; set; }
 }

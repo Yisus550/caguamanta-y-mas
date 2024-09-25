@@ -7,16 +7,13 @@ namespace caguamanta_y_mas.Datos;
 
 public partial class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext()
-    {
-    }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<Categorium> Categoria { get; set; }
+    public virtual DbSet<Categoria> Categoria { get; set; }
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
@@ -30,13 +27,9 @@ public partial class ApplicationDbContext : DbContext
 
     public virtual DbSet<Platillo> Platillos { get; set; }
 
-    public virtual DbSet<Proveedore> Proveedores { get; set; }
-
-    public virtual DbSet<Puesto> Puestos { get; set; }
+    public virtual DbSet<Proveedor> Proveedores { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
-    public virtual DbSet<Ventum> Venta { get; set; }
-
-    public virtual DbSet<horario> horarios { get; set; }
+    public virtual DbSet<Venta> Venta { get; set; }
 }
