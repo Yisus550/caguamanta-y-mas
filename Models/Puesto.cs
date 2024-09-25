@@ -12,12 +12,13 @@ public partial class Puesto
     [Key]
     public int idPue { get; set; }
 
-    [StringLength(50)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string Nombre { get; set; } = null!;
 
-    [Column(TypeName = "money")]
-    public decimal? Sueldo { get; set; }
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [Range(0, double.MaxValue, ErrorMessage = "El sueldo debe ser mayor a 0")]
+    public double? Sueldo { get; set; }
 
     [InverseProperty("idPuestoNavigation")]
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();

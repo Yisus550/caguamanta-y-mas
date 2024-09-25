@@ -9,14 +9,17 @@ namespace caguamanta_y_mas.Models;
 public partial class horario
 {
     [Key]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public int idH { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [StringLength(20, ErrorMessage = "Este campo no debe pasar los 20 caracteres")]
     public string? turno { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public TimeOnly? HoraEnt { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public TimeOnly? Horasal { get; set; }
 
     [InverseProperty("idTurnoNavigation")]

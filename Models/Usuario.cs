@@ -15,41 +15,40 @@ public partial class Usuario
     [Key]
     public int idU { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Nombres { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Apellidos { get; set; }
 
     public int? idPuesto { get; set; }
 
+    [DataType(DataType.Date)]
     public DateOnly? FhNa { get; set; }
 
+    [DataType(DataType.Date)]
     public DateOnly? FhCon { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Dir { get; set; }
 
-    [StringLength(10)]
-    [Unicode(false)]
+    [Phone]
     public string? Tel { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [EmailAddress]
     public string? Correo { get; set; }
 
     public int? idTurno { get; set; }
 
-    [Column("usuario")]
-    [StringLength(60)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? usuario1 { get; set; }
 
-    [StringLength(25)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? contraseña { get; set; }
 
     [InverseProperty("IDEmpleadoNavigation")]

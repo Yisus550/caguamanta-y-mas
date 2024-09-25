@@ -11,11 +11,12 @@ public partial class Categorium
     [Key]
     public int id { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage ="Este campo es obligatorio")]
     public string? NomC { get; set; }
 
-    [Column(TypeName = "text")]
+    [StringLength(120, ErrorMessage = "Este campo no debe pasar los 120 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Descripcion { get; set; }
 
 	[InverseProperty("CategoriaNavigation")]

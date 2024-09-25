@@ -12,14 +12,19 @@ public partial class Compra
     [Key]
     public int idCompra { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [DataType(DataType.Date)]
     public DateOnly FechaCompra { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public int IDEmpleado { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public int IDProveedor { get; set; }
 
-    [Column(TypeName = "money")]
-    public decimal? Importe { get; set; }
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [Range(0, double.MaxValue, ErrorMessage ="El importe debe ser mayor a 0")]
+    public double? Importe { get; set; }
 
     [ForeignKey("IDEmpleado")]
     [InverseProperty("Compras")]

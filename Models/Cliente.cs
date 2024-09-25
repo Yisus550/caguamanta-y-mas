@@ -11,12 +11,12 @@ public partial class Cliente
     [Key]
     public int idC { get; set; }
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Nombre { get; set; }
 
-    [StringLength(8)]
-    [Unicode(false)]
+    [Phone]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? importancia { get; set; }
 
     [InverseProperty("IDClienteNavigation")]

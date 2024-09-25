@@ -13,35 +13,37 @@ public partial class Proveedore
     [Key]
     public int idProveedor { get; set; }
 
-    [StringLength(50)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string NombrePv { get; set; } = null!;
 
-    [StringLength(50)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string ApellidoPv { get; set; } = null!;
 
-    [StringLength(3)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string Lada { get; set; } = null!;
 
-    [StringLength(14)]
-    [Unicode(false)]
+    [Phone]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+
     public string Telefono { get; set; } = null!;
 
-    [StringLength(60)]
-    [Unicode(false)]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
+    [EmailAddress(ErrorMessage ="No cumple con la estructura de un Email")]
     public string Correo { get; set; } = null!;
 
-    [StringLength(80)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string Empresa { get; set; } = null!;
 
-    [StringLength(60)]
-    [Unicode(false)]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? recurso { get; set; }
 
-    [Column(TypeName = "text")]
+    [StringLength(80, ErrorMessage = "Este campo no debe pasar los 80 caracteres")]
+    [Required(ErrorMessage = "Este campo es obligatorio")]
     public string? Descripcion { get; set; }
 
     [InverseProperty("IDProveedorNavigation")]
